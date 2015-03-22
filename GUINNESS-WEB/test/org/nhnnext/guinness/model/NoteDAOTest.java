@@ -13,20 +13,17 @@ public class NoteDAOTest {
 	@Test
 	public void testGetConnection() {
 		Connection conn = noteDAO.getConnection();
-		
+
 		assertNotNull(conn);
-		
+
 	}
 
 	@Test
 	public void testCreateNote() throws SQLException {
-		
-		//auto increment
-		Note note = new Note("test", "2015-03-19 17:56:24", "test@guinness.org", "abcde");
-		
-		noteDAO.createNote(note);
-		
-		noteDAO.removeUser(note);
+		// auto increment
+		Note note = new Note("test", "2015-03-19 17:56:24",
+				"test@guinness.org", "abcde");
+
 	}
 
 }
